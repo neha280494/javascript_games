@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./my-script.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Look up the Console in your Browser to see Game Play</h2>
+    <div class="container">
+    <ul>
+   <li> <h2>ROCK PAPER SCISSORS!!</h2></li>
+   <li>
+         <button id="btn-rock" class="game-btn">Rock</button>
+    <button id="btn-paper" class="game-btn">Paper</button>
+    <button id="btn-scissors" class="game-btn">Scissors</button>
+   </li> 
+    <li><label class="score-label-user">Your Score:</label><input type="text" id="score-user" class="score-box-user" value="0" readonly></li>
+     <li><label class="score-label-computer">Computer Score:</label><input type="text" id="score-computer" class="score-box-computer" value="0" readonly></li>
+    <li><label class="winner-label">Winner : </label><input type="text" id="winner-id" class="winner-box" value="" readonly></li>
+    
+</ul>
+ </div>
+ <script src="./my-script.js"></script>
 </body>
 </html>
