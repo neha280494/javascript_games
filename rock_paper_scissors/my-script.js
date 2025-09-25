@@ -100,16 +100,11 @@ function playRound(humanChoice, computerChoice)
 
 
 }
-let flag=false;
+
 function playGame(humanChoice,user)
 {
     let computerChoice = getComputerChoice();
-    playRound(humanChoice,computerChoice);
-   // document.getElementById('score-user').value = humanScore;
-   // document.getElementById('score-computer').value=computerScore;
-   // console.log("YOUR SCORE :"+humanScore);
-   // console.log("COMPUTER SCORE :"+computerScore);
-   
+    playRound(humanChoice,computerChoice);  
    if(humanScore==5 || computerScore==5)
    {
    
@@ -126,15 +121,16 @@ function playGame(humanChoice,user)
     computerScore=0;
     document.getElementById('score-user').value = 0;
     document.getElementById('score-computer').value=0;
+    
    }
     
 }
 
-//let name="";
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Select the buttons
+  // Get player name
    let name = prompt("Enter Your Name : ");
-    //console.log("Human choice :"+input);
+   
   const rockButton = document.querySelector('#btn-rock');
   const paperButton = document.querySelector('#btn-paper');
   const scissorsButton = document.querySelector('#btn-scissors');
@@ -151,7 +147,7 @@ rockButton.addEventListener("click",function(e) {
 
 
 
-// Add a click event listener to the Rock button
+// Add a click event listener to the Paper button
 paperButton.addEventListener("click",function(e) {
  
   playGame("paper",name);
@@ -159,7 +155,7 @@ paperButton.addEventListener("click",function(e) {
 
 });
 
-
+// Add a click event listener to the Scissors button
 scissorsButton.addEventListener("click",function(e) {
   
   playGame("scissors",name);
@@ -168,7 +164,7 @@ scissorsButton.addEventListener("click",function(e) {
 
 });
 
-//playGame();
+
 
 
 
